@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+     <p>
+        <a class="btn btn-secondary" href="{% url 'index'%}" >Return</a>
+    </p>
+<h2>{{user.name}}</h2>
+    {% if tasks %}
+
+            <table class="table">
+              <thead>
+                <tr class="table-primary" >
+                  <th>Title</th>
+                  <th >Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for task in tasks %}
+                    <tr>
+                      <td>{{ task.title }}</td>
+                        <td><a class="btn btn-secondary"  href="{% url 'showTask' task.id %}">show details</a></td>
+                    </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+
+    {% else %}
+        <p>
+        You have no task for the moment
+        </p>
+    {% endif%}
+    <p>
+        <a class="btn btn-success" href="{% url 'newTask' user.id %}" >add a new task</a>
+    </p>
+
+{% endblock %}

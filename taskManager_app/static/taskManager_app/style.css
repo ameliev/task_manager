@@ -1,0 +1,26 @@
+
+table{
+    text-align : center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container{
+    margin-top: 50px;
+}
+
+.btn-dark{
+    margin-bottom: 30px;
+}
+
+.login{
+    position: absolute;
+    right:20px;
+    top:20px;
+    margin-left:10px;
+}
+
+li{
+    margin-top : 5px;
+    margin-bottom : 5px;
+}
