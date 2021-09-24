@@ -32,7 +32,10 @@ def edit_task(request, pk):
             return redirect('tasksList', user_id=task.user_id)
     else:
         form = TaskForm(instance=task)
-    return render(request, 'forms/editTask.html', {'form': form})
+    return render(request, 'forms/editTask.html', {
+        'form': form,
+        'user_id': task.user_id
+    })
 
 
 @login_required
