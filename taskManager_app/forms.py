@@ -1,5 +1,5 @@
 from django import forms
-from .models import Tasks
+from .models import Task
 
 
 class TaskForm(forms.ModelForm):
@@ -11,5 +11,5 @@ class TaskForm(forms.ModelForm):
     )
 
     class Meta:
-        model = Tasks
+        model = Task
         fields = ('title', 'description')
