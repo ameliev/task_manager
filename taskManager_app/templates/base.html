@@ -12,7 +12,7 @@
   </head>
   <body>
   <div class="login">
-       {% if user.is_authenticated %}
+       {% if request.user.is_authenticated %}
             <p>
                 <a class="btn btn-secondary"  href="{% url 'logout' %}">Log out</a>
             </p>
